@@ -3,6 +3,8 @@
 frontend layout practice: form
 assignment to AlphaCamp
 
+![img](https://user-images.githubusercontent.com/69234380/111893559-817d2580-8a3e-11eb-99ae-8451f6e34f64.png)
+
 ## Prerequisites
 
 Node.js
