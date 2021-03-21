@@ -155,8 +155,6 @@ body {
 
         thead {
           .table__row {
-            position: sticky;
-            top: 0px;
             height: 50px;
             border-bottom: 1px solid var(--border-color);
 
@@ -192,7 +190,6 @@ body {
             .table__cell--price,
             .table__cell--starttime,
             .table__cell--endtime {
-              // position: relative;
               z-index: 2;
               min-width: 110px;
               .header__cell__icon {

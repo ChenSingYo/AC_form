@@ -1,4 +1,3 @@
-/* eslint-disable no-sequences */
 
 (function () {
   // popup menu
@@ -23,9 +22,10 @@
   }
   darkModeToggle.addEventListener('change', darkModeToggleHandler)
 
+  // change background color when row being selected
+
   const rowCheckBox = document.getElementsByClassName('table__cell--checkbox')
 
-  // change background color when row being selected
   const clickCheckBox = (e) => {
     const checkBox = e.target.parentElement.parentElement
     if (e.target.checked) {
@@ -43,13 +43,15 @@
   const checkBoxAll = (e) => {
     const allRows = document.querySelectorAll('tbody > tr')
     if (e.target.checked) {
-      allRows.forEach(el => (
-        el.classList.add('table__row--checked'),
-        el.childNodes[1].childNodes[1].setAttribute('checked', 'true')))
+      allRows.forEach(el => {
+        el.classList.add('table__row--checked')
+        el.querySelector('input').checked = 'checked'
+      })
     } else {
-      allRows.forEach(el => (
-        el.classList.remove('table__row--checked'),
-        el.childNodes[1].childNodes[1].removeAttribute('checked', 'true')))
+      allRows.forEach(el => {
+        el.classList.remove('table__row--checked')
+        el.querySelector('input').checked = ''
+      })
     }
   }
   rowCheckBox[0].addEventListener('click', checkBoxAll)

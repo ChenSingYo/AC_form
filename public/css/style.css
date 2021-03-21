@@ -156,9 +156,6 @@ body {
         width: 100%;
         height: 50%; }
         body .main .scroll-table .main__table thead .table__row {
-          position: -webkit-sticky;
-          position: sticky;
-          top: 0px;
           height: 50px;
           border-bottom: 1px solid var(--border-color); }
           body .main .scroll-table .main__table thead .table__row .table__cell {
