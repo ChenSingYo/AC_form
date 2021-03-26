@@ -1,13 +1,18 @@
 
 (function () {
+  const tbody = document.querySelector('.table__body')
+  const thead = document.querySelector('.table__header')
+
   // popup menu
   const maxRowNum = 24
   for (let rowNum = 1; rowNum <= maxRowNum; rowNum++) {
     const input = document.getElementById('action__input_' + rowNum)
+
     const toggleMenu = () => {
       const menu = document.getElementById('action__menu_' + rowNum)
       menu.classList.toggle('hidden')
     }
+
     input.addEventListener('click', toggleMenu)
   }
 
@@ -24,8 +29,6 @@
 
   // change background color when row being selected
 
-  const rowCheckBox = document.getElementsByClassName('table__cell--checkbox')
-
   const clickCheckBox = (e) => {
     const checkBox = e.target.parentElement.parentElement
     if (e.target.checked) {
@@ -35,9 +38,7 @@
     }
   }
 
-  for (let rowNum = 0; rowNum <= maxRowNum; rowNum++) {
-    rowCheckBox[rowNum].addEventListener('click', clickCheckBox)
-  }
+  tbody.addEventListener('click', clickCheckBox)
 
   // select all rows when header row being selected
   const checkBoxAll = (e) => {
@@ -54,6 +55,6 @@
       })
     }
   }
-  rowCheckBox[0].addEventListener('click', checkBoxAll)
+  thead.addEventListener('click', checkBoxAll)
 }
 )()
