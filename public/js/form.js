@@ -4,17 +4,12 @@
   const thead = document.querySelector('.table__header')
 
   // popup menu
-  const maxRowNum = 24
-  for (let rowNum = 1; rowNum <= maxRowNum; rowNum++) {
-    const input = document.getElementById('action__input_' + rowNum)
-
-    const toggleMenu = () => {
-      const menu = document.getElementById('action__menu_' + rowNum)
+  tbody.addEventListener('click', function toggleMenu (e) {
+    if (e.target.matches('.cell__action__icon')) {
+      const menu = e.target.nextElementSibling
       menu.classList.toggle('hidden')
     }
-
-    input.addEventListener('click', toggleMenu)
-  }
+  })
 
   // dark mode
   const darkModeToggle = document.getElementById('dark__mode__toggle')

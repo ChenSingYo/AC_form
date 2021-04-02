@@ -151,11 +151,11 @@ body {
       .main__table {
         background: var(--table-background-color);
         width: 100%;
-        height: 50%;
+        height: auto;
 
         thead {
           .table__row {
-            height: 50px;
+            height: 60px;
             border-bottom: 1px solid var(--border-color);
 
             .table__cell {
@@ -209,12 +209,11 @@ body {
         .table__body {
 
           .table__row {
-            height: 50px;
+            height:fit-content;
             border-bottom: 1px solid var(--border-color);
 
             .table__cell {
               text-align: center;
-
               input[type="checkbox"]:checked {
                 box-shadow: 0 0 0 3px hotpink;
               }
